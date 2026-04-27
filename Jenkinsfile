@@ -1,6 +1,6 @@
 pipeline {
 
-agent none
+agent any
 
 stages {
   stage ('build') {
@@ -30,6 +30,7 @@ sh 'docker ps'
 
 stage ('Test App') {
 steps {
+sh 'sleep 5'
 sh 'curl http://127.0.0.1:5000'
 }
 }

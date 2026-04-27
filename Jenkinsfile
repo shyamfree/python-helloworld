@@ -8,7 +8,7 @@ stages {
      docker { image 'python:3.11' }
      }
      steps {
-      python3 'app.py'
+      sh 'python3 app.py'
     }
    }
 }
